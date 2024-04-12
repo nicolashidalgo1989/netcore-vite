@@ -1,0 +1,36 @@
+    .alertas {
+        padding: 30px 0 100px;
+    }
+    .alertas section h2.sub {
+        font-size: var(--fs-32) !important;
+        color: var(--color-primary);
+        margin: 50px 0;
+    }
+
+    .alertas .alert {
+        color: var(--color-black);
+        border-radius: 20px;
+    }
+
+    .alertas .alert.alert-warning {
+        border-color: #FFE476;
+    }
+
+    .alertas .alert.alert-info {
+        border-color: #8AE4F6;
+        background: var(--color-white);
+    }
+    .alertas .alert.alert-success {
+        border-color: #A2EEAE;
+    }
+    .destaca-punteado {
+        border: 2px dashed #9747FF;
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    .alertas .alert a {
+        display: block;
+        margin-top: 30px;
+        color: var(--color-primary) !important;
+    }
