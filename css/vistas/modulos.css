@@ -1,0 +1,81 @@
+.modulos {
+    background-image: url(../../img/fondo-seccion-interior.svg);
+    background-position: center 135px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-attachment: fixed;
+    min-height: 90vh;
+    padding-top: 40px;
+    color: var(--color-black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+    .modulos .card-shadow {
+        background: hsl(0, 0%, 100%);
+        border-radius: 20px;
+        box-shadow: 0px 0px 16px 4px rgba(28, 0, 47, 0.1);
+        padding: 48px 76px;
+    }
+
+    .button-modulo-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 314px);
+        justify-content: space-between;
+    }
+
+    .modulos .titulo-modulo {
+        color: var(--color-black);
+        font-size: 2rem !important;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .modulos .button-modulo {
+        display: flex;
+        width: 314px;
+        padding: 8px 16px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        border-color: var(--color-auxiliar);
+        border-style: solid;
+        background-color:  hsl(0, 0%, 100%);
+        color: var(--color-black);
+        font-weight: 400;
+        transition: all .1s ease-in-out
+    }
+
+    .modulos .button-modulo.curso {
+        color: var(--color-auxiliar);
+        justify-content: center;
+    }
+
+    .modulos .button-modulo img {
+        margin-right: 16px;
+        filter: brightness(1) invert(0) hue-rotate(0deg);
+        transition: all .1s ease-in-out
+    }
+
+    .modulos .button-modulo:hover {
+        background:  var(--color-auxiliar);
+        color: hsl(0, 0%, 100%);;
+    }
+
+    .modulos .button-modulo:hover img {
+        filter: brightness(0) invert(1) hue-rotate(0deg);
+    }
+
+    .modulos dl{
+        margin: 0;
+    }
+    .modulos .modulo-dl {
+        display: flex;
+    }
+
+    .modulos .modulo-dl dt{
+        margin-right: 8px;
+    }

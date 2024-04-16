@@ -16,6 +16,7 @@
 @import "componentes/tabs.css";
 @import "componentes/alertas.css";
 @import "componentes/accordion.css";
+@import "componentes/breadcrumb.css";
 
 
 
@@ -25,3 +26,4 @@
 @import "vistas/login.css";
 @import "vistas/portal-privado.css";
 @import "vistas/producto-page.css";
+@import "vistas/modulos.css";
