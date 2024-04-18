@@ -44,3 +44,13 @@
     .modulos .modulo-dl dt{
         margin-right: 8px;
     }
+
+@media( max-width: 768px){
+    .modulos {
+        background: none;
+    }
+
+    .modulos .card-shadow {
+        padding: 32px;
+    }
+}

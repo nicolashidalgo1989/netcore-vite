@@ -94,3 +94,7 @@
     left: 20px;
     bottom: -20px;
 }
+
+.modal-content .form-floating>.form-select {
+    padding: 0 24px!important;
+}

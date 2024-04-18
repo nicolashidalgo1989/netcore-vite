@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación | Selección de Módulos</title>
+    <title>Educación | Nóminas</title>
     <!-- Boostrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,7 +21,7 @@
 
 <body>
     <header class="fixed-top menu-interno">
-        <div class="container nav-pr">
+        <div class="container">
             <div class="row">
                 <div class="col-6">
                     <a class="" href="#">
@@ -53,10 +53,61 @@
                 </div>
             </div>
         </div>
-        <nav class=" menu-interno-productos navbar navbar-expand-lg navbar-light bg-auxiliar">
+        <nav class="menu-interno-productos navbar navbar-expand-lg navbar-light bg-auxiliar">
             <div class="container container justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="nav nav-pills nav-fill flex-column flex-sm-row mt-4 d-lg-none" id="classBook" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" id="nominas-tab" data-bs-toggle="tab"
+                                data-bs-target="#nominas" type="button" role="tab" aria-controls="nominas"
+                                aria-selected="true">
+                                <img src="../img/modulos/icon-nominas.svg" alt="Nóminas">
+                                Nóminas
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" aria-current="page" id="assistance-tab" data-bs-toggle="tab"
+                                data-bs-target="#assistance" type="button" role="tab" aria-controls="assistance"
+                                aria-selected="true">
+                                <img src="../img/modulos/icon-assistance.svg" alt="Asistencia">
+                                Asistencia
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" aria-current="page" id="ratings-tab" data-bs-toggle="tab"
+                                data-bs-target="#ratings" type="button" role="tab" aria-controls="ratings"
+                                aria-selected="true">
+                                <img src="../img/modulos/icon-ratings.svg" alt="Calificaciones">
+                                Calificaciones
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" aria-current="page" id="cv-tab" data-bs-toggle="tab"
+                                data-bs-target="#cv" type="button" role="tab" aria-controls="cv"
+                                aria-selected="true">
+                                <img src="../img/modulos/icon-cv.svg" alt="Hoja de Vida">
+                                Hoja de Vida
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" aria-current="page" id="lectionary-tab" data-bs-toggle="tab"
+                                data-bs-target="#lectionary" type="button" role="tab" aria-controls="lectionary"
+                                aria-selected="true">
+                                <img src="../img/modulos/icon-lectionary.svg" alt="Leccionario">
+                                Leccionario
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col-12 d-block d-lg-none mt-4">
+                        <button type="button"
+                            class="btn btn-white outline color-white sistema w-100">Administración</button>
+                    </div>
+                </div>
                 <button type="button"
-                    class="btn btn-white outline color-white sistema d-none d-lg-block">Administración</button>
+                    class="btn btn-white outline color-white sistema  d-none d-lg-block">Administración</button>
             </div>
         </nav>
     </header>
@@ -75,10 +126,10 @@
                         </nav>
                     </div>
                     <div class="col-12">
-                        <div class="card-shadow p-4 mb-4">
+                        <div class="card-shadow p-sm-4 mb-4">
                             <div class="row d-flex align-items-center justify-content-between">
                                 <div class="col-12 col-lg-2">
-                                    <form action="" class="ingreso">
+                                    <form action="" class="ingreso mb-3 mb-sm-0">
                                         <div class="form-floating">
                                             <select class="form-select px-4" id="Curso" aria-label="Curso">
                                                 <option>1° básico A</option>
@@ -92,7 +143,7 @@
                                     </form>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <div class="body-text">
+                                    <div class="px-1">
                                         <dl>
                                             <div class="modulo-dl">
                                                 <dt>Especialidad:</dt>
@@ -106,7 +157,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <div class="body-text">
+                                    <div class="px-1">
                                         <dl>
                                             <div class="modulo-dl">
                                                 <dt>Plan de Estudios:</dt>
@@ -126,45 +177,56 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-2">
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
                         <ul class="nav nav-pills nav-fill" id="classBook" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" aria-current="page" id="nominas-tab" data-bs-toggle="tab" data-bs-target="#nominas" type="button" role="tab" aria-controls="nominas" aria-selected="true">
+                                <a class="nav-link active" aria-current="page" id="nominas-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nominas" type="button" role="tab" aria-controls="nominas"
+                                    aria-selected="true">
                                     <img src="../img/modulos/icon-nominas.svg" alt="Nóminas">
                                     Nóminas
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" aria-current="page" id="assistance-tab" data-bs-toggle="tab" data-bs-target="#assistance" type="button" role="tab" aria-controls="assistance" aria-selected="true">
+                                <a class="nav-link" aria-current="page" id="assistance-tab" data-bs-toggle="tab"
+                                    data-bs-target="#assistance" type="button" role="tab" aria-controls="assistance"
+                                    aria-selected="true">
                                     <img src="../img/modulos/icon-assistance.svg" alt="Asistencia">
                                     Asistencia
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" aria-current="page" id="ratings-tab" data-bs-toggle="tab" data-bs-target="#ratings" type="button" role="tab" aria-controls="ratings" aria-selected="true">
+                                <a class="nav-link" aria-current="page" id="ratings-tab" data-bs-toggle="tab"
+                                    data-bs-target="#ratings" type="button" role="tab" aria-controls="ratings"
+                                    aria-selected="true">
                                     <img src="../img/modulos/icon-ratings.svg" alt="Calificaciones">
                                     Calificaciones
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" aria-current="page" id="cv-tab" data-bs-toggle="tab" data-bs-target="#cv" type="button" role="tab" aria-controls="cv" aria-selected="true">
+                                <a class="nav-link" aria-current="page" id="cv-tab" data-bs-toggle="tab"
+                                    data-bs-target="#cv" type="button" role="tab" aria-controls="cv"
+                                    aria-selected="true">
                                     <img src="../img/modulos/icon-cv.svg" alt="Hoja de Vida">
                                     Hoja de Vida
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" aria-current="page" id="lectionary-tab" data-bs-toggle="tab" data-bs-target="#lectionary" type="button" role="tab" aria-controls="lectionary" aria-selected="true">
+                                <a class="nav-link" aria-current="page" id="lectionary-tab" data-bs-toggle="tab"
+                                    data-bs-target="#lectionary" type="button" role="tab" aria-controls="lectionary"
+                                    aria-selected="true">
                                     <img src="../img/modulos/icon-lectionary.svg" alt="Leccionario">
                                     Leccionario
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-10 card-shadow p-5">
+                    <div class="col-12 col-lg-10 card-shadow p-sm-5">
                         <div class="cont-section-admin">
                             <div class="row">
                                 <div class="col-12 border-neutral-separador" class="tab-content" id="classBookContent">
-                                    <div class="tabla-escritorio tab-pane fade show active" id="nominas" role="tabpanel" aria-labelledby="nominas-tab">
+                                    <div class="tabla-escritorio tab-pane fade show active" id="nominas" role="tabpanel"
+                                        aria-labelledby="nominas-tab">
                                         <h4 class="titulo-tabla">Nóminas</h4>
                                         <div class="global-actions">
                                             <a href="">
@@ -176,7 +238,92 @@
                                                 Descargar Nómina
                                             </a>
                                         </div>
-                                        <table class="table caption-top">
+                                        <div class="d-lg-none">
+                                            <div class="card-shadow mb-4">
+                                                <div class="row mb-4">
+                                                    <div class="col-12">
+                                                        <div>22.844.897-3</div>
+                                                        <div class="fw-bold">Carla Angelica Maturana Martinez</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-6">
+                                                        <div>Matrícula</div>
+                                                        <div class="fw-bold">357</div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div>Nº Lista</div>
+                                                        <div class="fw-bold">1</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 fw-bold">Acciones</div>
+                                                    <div class="col-9 row-actions">
+                                                        <div class="row">
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-delete.svg" alt="Eliminar">
+                                                                <span> Dar de baja </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-detail.svg" alt="Detalle">
+                                                                <span> Ver detalle </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-download.svg" alt="Descargar">
+                                                                <span> Descargar </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-edit.svg" alt="Editar">
+                                                                <span> Editar </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-shadow mb-4">
+                                                <div class="row mb-4">
+                                                    <div class="col-12">
+                                                        <div>14.145.135-6</div>
+                                                        <div class="fw-bold">Patricia Aurora Andrades Gutierrez</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-6">
+                                                        <div>Matrícula</div>
+                                                        <div class="fw-bold">356</div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div>Nº Lista</div>
+                                                        <div class="fw-bold">2</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 fw-bold">Acciones</div>
+                                                    <div class="col-9 row-actions">
+                                                        <div class="row">
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-delete.svg" alt="Eliminar">
+                                                                <span> Dar de baja </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-detail.svg" alt="Detalle">
+                                                                <span> Ver detalle </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-download.svg" alt="Descargar">
+                                                                <span> Descargar </span>
+                                                            </a>
+                                                            <a href="" class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                                                                <img class="w-auto" src="../img/modulos/icon-edit.svg" alt="Editar">
+                                                                <span> Editar </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="table caption-top d-none d-lg-table">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Matrícula</th>
@@ -258,16 +405,20 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tabla-escritorio tab-pane fade" id="assistance" role="tabpanel" aria-labelledby="assistance-tab">
+                                    <div class="tabla-escritorio tab-pane fade" id="assistance" role="tabpanel"
+                                        aria-labelledby="assistance-tab">
                                         <h4 class="titulo-tabla">Asistencia</h4>
                                     </div>
-                                    <div class="tabla-escritorio tab-pane fade" id="ratings" role="tabpanel" aria-labelledby="ratings-tab">
-                                            <h4 class="titulo-tabla">Calificaciones</h4>
+                                    <div class="tabla-escritorio tab-pane fade" id="ratings" role="tabpanel"
+                                        aria-labelledby="ratings-tab">
+                                        <h4 class="titulo-tabla">Calificaciones</h4>
                                     </div>
-                                    <div class="tabla-escritorio tab-pane fade" id="cv" role="tabpanel" aria-labelledby="cv-tab">
+                                    <div class="tabla-escritorio tab-pane fade" id="cv" role="tabpanel"
+                                        aria-labelledby="cv-tab">
                                         <h4 class="titulo-tabla">Hoja de vida</h4>
                                     </div>
-                                    <div class="tabla-escritorio tab-pane fade" id="lectionary" role="tabpanel" aria-labelledby="lectionary-tab">
+                                    <div class="tabla-escritorio tab-pane fade" id="lectionary" role="tabpanel"
+                                        aria-labelledby="lectionary-tab">
                                         <h4 class="titulo-tabla">Leccionario</h4>
                                     </div>
                                 </div>
@@ -280,94 +431,147 @@
     </main>
 
     <div class="modal fade" id="modalClienteEditar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-xl">
             <div class="modal-content ps-3">
                 <div class="modal-body">
                     <div class="container">
                         <div class="row justify-content-end">
                             <div class="col-2 col-lg-1">
-                                <button type="button" class="btn-close w-100" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close w-100" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                         </div>
                         <div class="modal-edit-data row">
                             <div class="col-12">
                                 <h4 class="text-start">Editar ficha</h4>
                             </div>
-                            <div class="col-12 col-lg-3">
+                            <form action="" class="d-lg-none">
+                                <div class="form-floating w-100">
+                                    <select class="form-select" id="selectEditDataMobile" aria-label="Selección de información a editar">
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Datos generakes</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Datos de Contacto</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#fatherData"  value="fatherData" selected>Datos de Padre</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Datos de Madre</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#socialData"  value="socialData">Datos Sociales</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Antecedentes de salud</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Atenciones médicas</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Enfermedades</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Apoderado académico</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Datos del curso</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Apoderado financiero</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Apoderado delegado</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Procedente</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Alumno migrante</option>
+                                        <option data-bs-toggle="tab" data-bs-target="#generalData" value="generalData">Convivencia escolar</option>
+                                    </select>
+                                    <label for="selectEditDataMobile">Selección de información a editar</label>
+                                </div>
+                            </form>
+                            <div class="col-12 col-lg-3 d-lg-block d-none">
                                 <ul class="nav nav-tabs nav-pills nav-fill" id="editFile" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="generalData-tab" data-bs-toggle="tab" data-bs-target="#generalData" type="button" role="tab" aria-controls="generalData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="generalData-tab"
+                                            data-bs-toggle="tab" data-bs-target="#generalData" type="button" role="tab"
+                                            aria-controls="generalData" aria-selected="true">
                                             Datos Generales
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="contactData-tab" data-bs-toggle="tab" data-bs-target="#contactData" type="button" role="tab" aria-controls="contactData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="contactData-tab"
+                                            data-bs-toggle="tab" data-bs-target="#contactData" type="button" role="tab"
+                                            aria-controls="contactData" aria-selected="true">
                                             Datos de Contacto
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="fatherData-tab" data-bs-toggle="tab" data-bs-target="#fatherData" type="button" role="tab" aria-controls="fatherData" aria-selected="true">
+                                        <a class="nav-link active" aria-current="page" id="fatherData-tab" data-bs-toggle="tab"
+                                            data-bs-target="#fatherData" type="button" role="tab"
+                                            aria-controls="fatherData" aria-selected="true">
                                             Datos de Padre
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="motherData-tab" data-bs-toggle="tab" data-bs-target="#motherData" type="button" role="tab" aria-controls="motherData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="motherData-tab" data-bs-toggle="tab"
+                                            data-bs-target="#motherData" type="button" role="tab"
+                                            aria-controls="motherData" aria-selected="true">
                                             Datos de Madre
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link active" aria-current="page" id="socialData-tab" data-bs-toggle="tab" data-bs-target="#socialData" type="button" role="tab" aria-controls="socialData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="socialData-tab"
+                                            data-bs-toggle="tab" data-bs-target="#socialData" type="button" role="tab"
+                                            aria-controls="socialData" aria-selected="true">
                                             Datos Sociales
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="healthData-tab" data-bs-toggle="tab" data-bs-target="#healthData" type="button" role="tab" aria-controls="healthData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="healthData-tab" data-bs-toggle="tab"
+                                            data-bs-target="#healthData" type="button" role="tab"
+                                            aria-controls="healthData" aria-selected="true">
                                             Antecedentes de salud
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="medicData-tab" data-bs-toggle="tab" data-bs-target="#medicData" type="button" role="tab" aria-controls="medicData" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="medicData-tab" data-bs-toggle="tab"
+                                            data-bs-target="#medicData" type="button" role="tab"
+                                            aria-controls="medicData" aria-selected="true">
                                             Atenciones médicas
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Enfermedades
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Apoderado académico
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Datos del curso
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Apoderado financiero
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Apoderado delegado
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Procedente
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Alumno migrante
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">
+                                        <a class="nav-link" aria-current="page" id="data-tab" data-bs-toggle="tab"
+                                            data-bs-target="#data" type="button" role="tab" aria-controls="data"
+                                            aria-selected="true">
                                             Convivencia escolar
                                         </a>
                                     </li>
@@ -375,7 +579,8 @@
                             </div>
                             <div class="col-12 col-lg-9 tab-content" id="editFileContent">
                                 <!-- Datos de Padre-->
-                                <div class="p-5 tab-pane fade" id="fatherData" role="tabpanel" aria-labelledby="fatherData-tab">
+                                <div class="py-5 px-lg-5 tab-pane fade show active" id="fatherData" role="tabpanel"
+                                    aria-labelledby="fatherData-tab">
                                     <h4 class="text-start m-0">Datos de Padre</h4>
                                     <div class="row">
                                         <form action="" class="col-12 ingreso">
@@ -386,16 +591,16 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="Placeholder" value="" autocomplete="off">
                                                         <label for="float1">RUT</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa RUT válido</span>
                                                     </div>
                                                 </div>
                                                 <div
-                                                    class="col-12 col-md-3 align-items-center d-flex justify-content-center">
+                                                    class="col-12 col-md-6 col-lg-3 align-items-center d-flex justify-content-center">
                                                     <button type="button"
                                                         class="btn btn-sm btn-primary w-100">Buscar</button>
                                                 </div>
                                                 <div
-                                                    class="col-12 col-md-3 align-items-center d-flex justify-content-center">
+                                                    class="col-12 col-md-6 col-lg-3 align-items-center d-flex justify-content-center">
                                                     <button type="button"
                                                         class="btn btn-sm btn-primary outline w-100 color-primary">Limpiar</button>
                                                 </div>
@@ -406,7 +611,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Nombres</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu nombre completo</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -416,7 +621,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Apellido paterno</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu apellido paterno</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -424,7 +629,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Apellido materno</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu apellido materno</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -434,7 +639,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Fecha nacimiento</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu fecha de nacimiento</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -442,7 +647,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Estado civil</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu estado civil</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -452,7 +657,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Nivel educacional</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu nivel educacional</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -463,7 +668,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Región</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu región</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -473,7 +678,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Provincia</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu provincia</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -481,7 +686,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Comuna</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu comuna</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -491,7 +696,7 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Dirección</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu dirección</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -502,25 +707,27 @@
                                                         <input type="text" class="form-control" id="float1"
                                                             placeholder="" value="" autocomplete="off">
                                                         <label for="float1">Teléfono</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa tu teléfono</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="row justify-content-center my-3">
-                                        <div class="col-12 col-md-3 mt-2">
+                                        <div class="col-6 col-md-3 mt-2">
                                             <button type="button"
-                                                class="btn btn-primary outline sistema w-100 color-primary">Volver</button>
+                                                class="btn btn-primary outline sistema w-100 color-primary"
+                                                data-bs-dismiss="modal" aria-label="Close">Volver</button>
                                         </div>
-                                        <div class="col-12 col-md-3 mt-2">
+                                        <div class="col-6 col-md-3 mt-2">
                                             <button type="button" class="btn btn-primary sistema w-100">Guardar
                                                 ficha</button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Datos sociales-->
-                                <div class="p-5 tab-pane fade show active" id="socialData" role="tabpanel" aria-labelledby="socialData-tab">
+                                <div class="py-5 px-lg-5 tab-pane fade" id="socialData" role="tabpanel"
+                                    aria-labelledby="socialData-tab">
                                     <h4 class="text-start m-0">Datos Familiares</h4>
                                     <div class="row">
                                         <form action="" class="col-12 ingreso">
@@ -602,6 +809,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <span class="instruccion">Selecciona una o más opciónes</span>
                                                 </div>
                                             </div>
                                             <div class="row mb-5">
@@ -610,7 +818,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">Nº de personas</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa numero de personas</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -618,7 +826,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">Nº trabajadores</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa numero de trabajadores</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -626,21 +834,21 @@
                                                 <div class="col-6">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Máma</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Jefe de hogar</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa jefe de hogar</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Trabajador dependiente</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Situación laboral</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa situación laboral</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -648,21 +856,21 @@
                                                 <div class="col-6">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>4</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Nº de hermanos</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa número de hermanos</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>2</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Hermano/a en curso</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa curso de hermano/a</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -670,11 +878,11 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>C2</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Situación económica</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa situación enconómica</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -684,7 +892,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">Pasaporte o DNI</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa pasaporte o DNI</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -694,7 +902,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">$ Ingreso familiar</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa ingreso familiar</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -703,11 +911,11 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Sólida</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Tipo de vivienda</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa tipo de vivienda</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -715,12 +923,13 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Arrendada</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Pertenencia de la
                                                             vivienda</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa pertenencia de la
+                                                            vivienda</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -728,12 +937,13 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Potable</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Tipo de suministro de
                                                             agua</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa tipo de suministro de
+                                                            agua</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -743,7 +953,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder">
                                                         <label for="float1">Nº Baños</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa número de baños</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -751,11 +961,11 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Propio</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Tipo de baño</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa tipo de baño</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -765,7 +975,7 @@
                                                         <input type="text" class="form-control bg-white" id="float1"
                                                             placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">Nº de habitaciones</label>
-                                                        <span class="instruccion">Helper text</span>
+                                                        <span class="instruccion">Ingresa número de habitaciones</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -773,11 +983,11 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
+                                                            aria-label="Floating label select example">
                                                             <option selected>Urbano</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Sector dónde vive</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa sector donde vive</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -785,21 +995,11 @@
                                             <div class="row mb-5">
                                                 <div class="col-12">
                                                     <div class="form-floating">
-                                                        <input type="text" class="form-control bg-white" id="float1" placeholder="Placeholder" autocomplete="off">
+                                                        <input type="text" class="form-control bg-white" id="float1"
+                                                            placeholder="Placeholder" autocomplete="off">
                                                         <label for="float1">Tiempo de casa a colegio</label>
-                                                        <span class="instruccion">Helper text</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-5">
-                                                <div class="col-12">
-                                                    <div class="form-floating w-100">
-                                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                                            <option selected>Público</option>
-                                                        </select>
-                                                        <label for="floatingSelectGrid">Tipo de transporte
-                                                            escolar</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa tiempo de casa a
+                                                            colegio</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -807,23 +1007,40 @@
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
                                                         <select class="form-select" id="floatingSelectGrid"
-                                                         aria-label="Floating label select example">
-                                                            <option selected>Adecuado</option>
+                                                            aria-label="Floating label select example">
+                                                            <option selected>Público</option>
                                                         </select>
-                                                        <label for="floatingSelectGrid">Calificación del lugar de
-                                                            estudios</label>
-                                                        <span class="instruccion"></span>
+                                                        <label for="floatingSelectGrid">Tipo de transporte
+                                                            escolar</label>
+                                                        <span class="instruccion">Ingresa tipo de transporte
+                                                            escolar</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row mb-5">
                                                 <div class="col-12">
                                                     <div class="form-floating w-100">
-                                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                        <select class="form-select" id="floatingSelectGrid"
+                                                            aria-label="Floating label select example">
+                                                            <option selected>Adecuado</option>
+                                                        </select>
+                                                        <label for="floatingSelectGrid">Calificación del lugar de
+                                                            estudios</label>
+                                                        <span class="instruccion">Ingresa calificación del lugar de
+                                                            estudios</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-12">
+                                                    <div class="form-floating w-100">
+                                                        <select class="form-select" id="floatingSelectGrid"
+                                                            aria-label="Floating label select example">
                                                             <option selected>VidaCamara</option>
                                                         </select>
                                                         <label for="floatingSelectGrid">Seguro médico adicional</label>
-                                                        <span class="instruccion"></span>
+                                                        <span class="instruccion">Ingresa cseguro médico
+                                                            adicional</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -839,16 +1056,21 @@
                                                     <div class="row justify-content-end">
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" value="" name="support" id="support-yes">
-                                                                <label class="form-check-label" for="support-yes"> Si </label>
+                                                                <input class="form-check-input" type="radio" value=""
+                                                                    name="support" id="support-yes">
+                                                                <label class="form-check-label" for="support-yes"> Si
+                                                                </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" value="" name="support" id="support-no">
-                                                                <label class="form-check-label" for="support-no"> No </label>
+                                                                <input class="form-check-input" type="radio" value=""
+                                                                    name="support" id="support-no">
+                                                                <label class="form-check-label" for="support-no"> No
+                                                                </label>
                                                             </div>
                                                         </div>
+                                                        <span class="instruccion">Ingresa una opción</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -859,7 +1081,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             JUNAEB
                                                         </label>
@@ -867,7 +1090,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Chile Solidario
 
@@ -876,7 +1100,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Embarazada
                                                         </label>
@@ -884,7 +1109,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Programa Puente
                                                         </label>
@@ -892,7 +1118,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Educación especial lenguaje
                                                         </label>
@@ -900,7 +1127,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Registro Social de Hogares
                                                         </label>
@@ -908,7 +1136,8 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Cónyugue
                                                         </label>
@@ -916,23 +1145,23 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                             Otros
                                                         </label>
                                                     </div>
                                                 </div>
-
-
                                             </div>
                                         </form>
                                     </div>
                                     <div class="row justify-content-center my-3">
-                                        <div class="col-12 col-md-3 mt-2">
+                                        <div class="col-6 col-md-3 mt-2">
                                             <button type="button"
-                                                class="btn btn-primary outline sistema w-100 color-primary">Volver</button>
+                                                class="btn btn-primary outline sistema w-100 color-primary"
+                                                data-bs-dismiss="modal" aria-label="Close">Volver</button>
                                         </div>
-                                        <div class="col-12 col-md-3 mt-2">
+                                        <div class="col-6 col-md-3 mt-2">
                                             <button type="button" class="btn btn-primary sistema w-100">Guardar
                                                 ficha</button>
                                         </div>
@@ -956,6 +1185,14 @@
         document.onreadystatechange = function () {
             myModal.show();
         };
+        // muestra opcion a editar en mobile
+        document.querySelector('#selectEditDataMobile').addEventListener('change', e => {
+            console.log(e.target.value);
+            document.querySelectorAll('.tab-pane').forEach( item => item.classList.remove('show','active'));
+            if(document.getElementById(e.target.value)){
+                document.getElementById(e.target.value).classList.add('show','active');
+            }
+        });
     </script>
 
 </body>
