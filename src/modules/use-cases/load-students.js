@@ -8,8 +8,6 @@ export const loadStudents = async () => {
 
     const students = await data.map( localhostStudentToModel );
 
-    console.log(students);
-
     return students;
 
 }
