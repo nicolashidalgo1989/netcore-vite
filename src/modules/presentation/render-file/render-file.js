@@ -2,6 +2,8 @@
  import { renderNav } from '../render-nav/render-nav';
  import { renderFormSelect } from '../render-form-select/render-form-select';
  import { renderTitle } from '../../presentation/render-title/render-title';
+ import { renderActions } from '../../presentation/render-actions/render-actions';
+ import { renderTable } from '../../presentation/render-table/render-table';
 
 export const renderFile = (element) =>  {
 
@@ -35,6 +37,9 @@ export const renderFile = (element) =>  {
 
     const title = document.querySelector('#classBookContent');
     renderTitle( title, contenido );
+
+    renderActions( title );
+    renderTable( title );
 
     if( submodules.length === 0) return;
     submodules.forEach( m => {

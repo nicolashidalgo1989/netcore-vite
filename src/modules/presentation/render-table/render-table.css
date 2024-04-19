@@ -1,0 +1,55 @@
+
+.table .global-actions{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.table .global-actions a{
+    text-decoration: none;
+    color: #6500E4;
+    margin: 0 8px;
+}
+
+.table td{
+    text-align: left;
+}
+
+.table .text-center{
+    text-align: center;
+}
+
+.table .text-right{
+    text-align: right;
+}
+
+.table thead{
+    background: #FFF0E2;
+}
+
+.table th{
+    font-weight: 800;
+}
+
+.table td a{
+    text-decoration:  none;
+}
+
+.table .row-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table .row-actions a{
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
+.table .row-actions a img{
+    width: 100%;
+}

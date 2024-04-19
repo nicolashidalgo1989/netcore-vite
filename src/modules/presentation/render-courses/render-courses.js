@@ -1,4 +1,4 @@
- import { loadCourses } from '../../use-cases/load-courses';
+import { loadCourses } from '../../use-cases/load-courses';
 import { renderTitle } from '../../presentation/render-title/render-title';
 import { renderButton } from '../render-button/render-button';
 

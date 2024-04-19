@@ -1,0 +1,13 @@
+.global-actions{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.global-actions a{
+    text-decoration: none;
+    color: #6500E4;
+    margin: 0 8px;
+}
