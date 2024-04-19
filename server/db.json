@@ -1,0 +1,100 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "matricula": "452",
+            "numeroLista": "1",
+            "run": "7044545K",
+            "nombre": "Carla Angelica",
+            "apellidoMaterno": "Maturana",
+            "apellidoPaterno": "Martinez"
+        },
+        {
+            "id": 1,
+            "matricula": "356",
+            "numeroLista": "1",
+            "run": "174134588",
+            "nombre": "Nicolas",
+            "apellidoMaterno": "Cavieres",
+            "apellidoPaterno": "Hidalgo"
+        }
+    ],
+    "modules": [
+        {
+            "text": "Administración",
+            "tag": "admin",
+            "submodules": []
+        },
+        {
+            "text": "Establecimientos",
+            "tag": "establishments",
+            "submodules": []
+        },
+        {
+            "text": "Libro de clases",
+            "tag": "classbook",
+            "submodules": [
+                {
+                    "text": "Nóminas",
+                    "tag": "nominas"
+                },
+                {
+                    "text": "Asistencia",
+                    "tag": "assistance"
+                },
+                {
+                    "text": "Calificaciones",
+                    "tag": "ratings"
+                },
+                {
+                    "text": "Hoja de vida",
+                    "tag": "cv"
+                },
+                {
+                    "text": "Leccionario",
+                    "tag": "lectionary"
+                }
+            ]
+        },
+        {
+            "text": "Recursos curriculares",
+            "tag": "resources",
+            "submodules": []
+        },
+        {
+            "text": "Planificaciones",
+            "tag": "plans",
+            "submodules": []
+        },
+        {
+            "text": "Sostenedores",
+            "tag": "holders",
+            "submodules": []
+        },
+        {
+            "text": "PIE",
+            "tag": "sign",
+            "submodules": []
+        }
+    ],
+    "courses": [
+        {
+            "text": "1º basico A"
+        },
+        {
+            "text": "2º basico A"
+        },
+        {
+            "text": "3º basico A"
+        },
+        {
+            "text": "4º basico A"
+        },
+        {
+            "text": "1º basico B"
+        },
+        {
+            "text": "2º basico B"
+        }
+    ]
+}
