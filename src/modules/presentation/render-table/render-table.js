@@ -1,4 +1,5 @@
 import { loadStudents } from '../../use-cases/load-students';
+import { renderModalEditFile } from '../render-modal-edit-file/render-modal-edit-file';
 import './render-table.css';
 
 export const renderTable = async(element) => {
@@ -72,8 +73,8 @@ export const renderTable = async(element) => {
                                     alt="Descargar">
                                 <span> Descargar </span>
                             </a>
-                            <a href=""
-                                class="text-decoration-none mb-3 w-50 d-flex flex-direction-row">
+                            <a href="#"
+                                class="text-decoration-none mb-3 w-50 d-flex flex-direction-row edit-button">
                                 <img class="w-auto" src="icon-edit.svg"
                                     alt="Editar">
                                 <span> Editar </span>
@@ -101,12 +102,20 @@ export const renderTable = async(element) => {
                     <a href="">
                         <img src="icon-download.svg" alt="Descargar">
                     </a>
-                    <a href="">
+                    <a href="#" class="edit-button">
                         <img src="icon-edit.svg" alt="Editar">
                     </a>
                 </td>
             </tr>
         `;
     } );
+
+    const editBtn = document.querySelectorAll('.edit-button');
+    editBtn.forEach( item => {
+        item.addEventListener('click', () => {
+            const main = document.querySelector('main');
+            renderModalEditFile( main );
+        });
+    })
 
 }

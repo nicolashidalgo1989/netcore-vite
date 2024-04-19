@@ -1,18 +1,13 @@
 import html from './render-modal-edit-file.html?raw';
-import './render-modal-edit-file.css';
 
 export const renderModalEditFile = (element) =>  {
+    console.log(element);
     const modal = document.createElement('div');
     modal.innerHTML = html;
     element.append( modal );
-}
-
-export const loadModal = () => {
     // Abre modal cuando carga página
     var myModal = new bootstrap.Modal(document.getElementById("modalClienteEditar"), {});
-    document.onreadystatechange = function () {
-        myModal.show();
-    };
+    myModal.show();
 }
 
 export const changeData = () => {
