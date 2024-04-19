@@ -14,7 +14,4 @@ export const renderNav = (element, ...args) =>  {
         </a>
     `;
     element.append( button );
-    button.addEventListener( 'click', () => {
-        console.log('click')
-    });
 }

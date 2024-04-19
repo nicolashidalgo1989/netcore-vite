@@ -1,7 +1,6 @@
 import html from './render-modal-edit-file.html?raw';
 
 export const renderModalEditFile = (element) =>  {
-    console.log(element);
     const modal = document.createElement('div');
     modal.innerHTML = html;
     element.append( modal );
@@ -13,7 +12,6 @@ export const renderModalEditFile = (element) =>  {
 export const changeData = () => {
     // muestra opcion a editar en mobile
     document.querySelector('#selectEditDataMobile').addEventListener('change', e => {
-        console.log(e.target.value);
         document.querySelectorAll('.tab-pane').forEach( item => item.classList.remove('show','active'));
         if(document.getElementById(e.target.value)){
             document.getElementById(e.target.value).classList.add('show','active');
