@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))t(l);new MutationObserver(l=>{for(const o of l)if(o.type==="childList")for(const s of o.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&t(s)}).observe(document,{childList:!0,subtree:!0});function e(l){const o={};return l.integrity&&(o.integrity=l.integrity),l.referrerPolicy&&(o.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?o.credentials="include":l.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function t(l){if(l.ep)return;l.ep=!0;const o=e(l);fetch(l.href,o)}})();const p=async()=>await await(await fetch("http://localhost:3001/modules")).json(),d={courses:[],modules:[],students:[]},m=async()=>{const n=await p();n.length!==0&&(d.modules=n)},v={reloadPage:m,getCourses:()=>[...d.courses],getModules:()=>[...d.modules],getStudents:()=>[...d.students]},f=`<header class="fixed-top menu-interno">
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))t(l);new MutationObserver(l=>{for(const o of l)if(o.type==="childList")for(const s of o.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&t(s)}).observe(document,{childList:!0,subtree:!0});function e(l){const o={};return l.integrity&&(o.integrity=l.integrity),l.referrerPolicy&&(o.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?o.credentials="include":l.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function t(l){if(l.ep)return;l.ep=!0;const o=e(l);fetch(l.href,o)}})();const p=async()=>await await(await fetch("http://localhost:3001/modules")).json(),r={courses:[],modules:[],students:[]},m=async()=>{const n=await p();n.length!==0&&(r.modules=n)},v={reloadPage:m,getCourses:()=>[...r.courses],getModules:()=>[...r.modules],getStudents:()=>[...r.students]},f=`<header class="fixed-top menu-interno">
     <div class="container nav-pr">
         <div class="row">
             <div class="col-6">
@@ -59,10 +59,10 @@
         <li class="breadcrumb-item"><a href="#">Libro de clases</a></li>
         <li class="breadcrumb-item active" aria-current="page">Nominas</li>
     </ol>
-</nav>`,w=n=>{const a=document.createElement("div");a.innerHTML=y,n.append(a)};let c;const b=(n,...a)=>{const e=a[0];c||(c=document.createElement("div")),c.innerHTML=`
+</nav>`,w=n=>{const a=document.createElement("div");a.innerHTML=y,n.append(a)};let i;const b=(n,...a)=>{const e=a[0];i||(i=document.createElement("div")),i.innerHTML=`
         <h2 class="mb-3 titulo-modulo">${e.titulo}</h2>
         <p class="mb-5">${e.subtitulo}</p>
-    `,n.append(c)},k=async()=>await await(await fetch("http://localhost:3001/courses")).json(),D=async n=>{const a={titulo:"Selección de Curso",subtitulo:"Este módulo te brinda acceso directo a los recursos educativos esenciales. Descubre una amplia variedad de contenidos diseñados para apoyarte en tu aprendizaje y logro de objetivos académicos."},e=document.querySelector("#title");b(e,a);const t=await k();n.innerHTML="",t.length!==0&&t.forEach(l=>{u(n,l)})},x=(n,...a)=>{const e=a[0],t=document.createElement("li");t.className="nav-item",t.setAttribute("role","presentation"),t.innerHTML=`
+    `,n.append(i)},k=async()=>await await(await fetch("http://localhost:3001/courses")).json(),D=async n=>{const a={titulo:"Selección de Curso",subtitulo:"Este módulo te brinda acceso directo a los recursos educativos esenciales. Descubre una amplia variedad de contenidos diseñados para apoyarte en tu aprendizaje y logro de objetivos académicos."},e=document.querySelector("#title");b(e,a);const t=await k();n.innerHTML="",t.length!==0&&t.forEach(l=>{u(n,l)})},x=(n,...a)=>{const e=a[0],t=document.createElement("li");t.className="nav-item",t.setAttribute("role","presentation"),t.innerHTML=`
         <a class="nav-link" aria-current="page" id="${e.tag}-tab" data-bs-toggle="tab"
             data-bs-target="#${e.tag}" type="button" role="tab" aria-controls="${e.tag}"
             aria-selected="true">
@@ -112,14 +112,14 @@
             </div>
         </div>
     </div>
-</div>`,C=n=>{n.innerHTML="";const a=document.createElement("div");a.className="form-floating",a.innerHTML=S,n.append(a)},M=`<a href="">
+</div>`,C=n=>{n.innerHTML="";const a=document.createElement("div");a.className="form-floating",a.innerHTML=S,n.append(a)},E=`<a href="">
     <img src="icon-view.svg" alt="Ver nóminas">
     Ver nóminas
 </a>
 <a href="">
     <img src="icon-download.svg" alt="Descargar Nómina">
     Descargar Nómina
-</a>`,E=n=>{const a=document.createElement("div");a.className="global-actions",a.innerHTML=M,n.append(a)};class I{constructor({id:a,matricula:e,numeroLista:t,run:l,nombre:o,apellidoMaterno:s,apellidoPaterno:i}){this.id=a,this.matricula=e,this.numeroLista=t,this.run=l,this.nombre=o,this.apellidoMaterno=s,this.apellidoPaterno=i}}const $=n=>{const{id:a,matricula:e,numeroLista:t,run:l,nombre:o,apellidoMaterno:s,apellidoPaterno:i}=n;return new I({id:a,matricula:e,numeroLista:t,run:l,nombre:o,apellidoMaterno:s,apellidoPaterno:i})},P=async()=>await(await(await fetch("http://localhost:3001/students")).json()).map($),L=`<div class="modal fade" id="modalClienteEditar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+</a>`,M=n=>{const a=document.createElement("div");a.className="global-actions",a.innerHTML=E,n.append(a)},I=async()=>await await(await fetch("http://localhost:3001/students")).json(),$=`<div class="modal fade" id="modalClienteEditar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content ps-3">
@@ -878,7 +878,7 @@
             </div>
         </div>
     </div>
-</div>`,A=n=>{const a=document.createElement("div");a.innerHTML=L,n.append(a);var e=new bootstrap.Modal(document.getElementById("modalClienteEditar"),{});e.show()},T=async n=>{const a=await P();if(a.length===0)return;const e=document.createElement("div");e.innerHTML=`
+</div>`,A=n=>{const a=document.createElement("div");a.innerHTML=$,n.append(a);var e=new bootstrap.Modal(document.getElementById("modalClienteEditar"),{});e.show()},P=async n=>{const a=await I();if(a.length===0)return;const e=document.createElement("div");e.innerHTML=`
         <div class="d-lg-none" id="mobileContainer">
         </div>
         <table class="table caption-top d-none d-lg-table">
@@ -969,7 +969,7 @@
                     </a>
                 </td>
             </tr>
-        `}),document.querySelectorAll(".edit-button").forEach(l=>{l.addEventListener("click",()=>{const o=document.querySelector("main");A(o)})})},G=n=>{const a={titulo:"Nóminas",subtitulo:""},e=document.querySelector("#select-course");C(e),n.className="row",n.innerHTML=`
+        `}),document.querySelectorAll(".edit-button").forEach(l=>{l.addEventListener("click",()=>{const o=document.querySelector("main");A(o)})})},L=n=>{const a={titulo:"Nóminas",subtitulo:""},e=document.querySelector("#select-course");C(e),n.className="row",n.innerHTML=`
         <div class="col-12 col-lg-2 d-none d-lg-block">
             <ul class="nav nav-pills nav-fill" id="classBook" role="tablist"> </ul>
         </div>
@@ -981,10 +981,10 @@
                 </div>
             </div>
         </div>
-    `;const t=document.querySelector("#classBook"),o=v.getModules().filter(i=>i.tag==="classbook")[0].submodules,s=document.querySelector("#classBookContent");b(s,a),E(s),T(s),o.length!==0&&o.forEach(i=>{x(t,i)})};let r=0;const u=(n,...a)=>{const e=a[0],t=document.createElement("button");t.className="button-modulo",r===0?t.innerHTML=`
+    `;const t=document.querySelector("#classBook"),o=v.getModules().filter(d=>d.tag==="classbook")[0].submodules,s=document.querySelector("#classBookContent");b(s,a),M(s),P(s),o.length!==0&&o.forEach(d=>{x(t,d)})};let c=0;const u=(n,...a)=>{const e=a[0],t=document.createElement("button");t.className="button-modulo",c===0?t.innerHTML=`
             <img src="icon-${e.tag}.svg" alt="${e.text}">
             ${e.text}
-        `:r===1?(t.classList.add("curso"),t.innerHTML=e.text):t.innerHTML=`
+        `:c===1?(t.classList.add("curso"),t.innerHTML=e.text):t.innerHTML=`
             <li class="nav-item" role="presentation">
                 <a class="nav-link" aria-current="page" id="${e.tag}-tab" data-bs-toggle="tab"
                     data-bs-target="#${e.tag}" type="button" role="tab" aria-controls="${e.tag}"
@@ -993,4 +993,4 @@
                     ${e.text}
                 </a>
             </li>
-        `,n.append(t),t.addEventListener("click",()=>{if(r>0){const l=document.querySelector("#modules").parentElement.parentElement;l.innerHtml="",G(l)}else D(n);r++})},N=n=>{const a={titulo:"Selección del Módulo de Educación",subtitulo:"Este módulo te brinda acceso directo a los recursos educativos esenciales. Descubre una amplia variedad de contenidos diseñados para apoyarte en tu aprendizaje y logro de objetivos académicos."},e=document.querySelector("#title");b(e,a),v.getModules().forEach(l=>{u(n,l)})},j=n=>{const a=document.createElement("main");a.innerHTML=h,n.append(a);const e=document.querySelector("#breadcrumb");w(e);const t=document.querySelector("#modules");N(t)},H=async n=>{await v.reloadPage(),n.innerHTML="",g(n),j(n)},F=document.querySelector("#netcoreApp");H(F);
+        `,n.append(t),t.addEventListener("click",()=>{if(c>0){const l=document.querySelector("#modules").parentElement.parentElement;l.innerHtml="",L(l)}else D(n);c++})},T=n=>{const a={titulo:"Selección del Módulo de Educación",subtitulo:"Este módulo te brinda acceso directo a los recursos educativos esenciales. Descubre una amplia variedad de contenidos diseñados para apoyarte en tu aprendizaje y logro de objetivos académicos."},e=document.querySelector("#title");b(e,a),v.getModules().forEach(l=>{u(n,l)})},G=n=>{const a=document.createElement("main");a.innerHTML=h,n.append(a);const e=document.querySelector("#breadcrumb");w(e);const t=document.querySelector("#modules");T(t)},N=async n=>{await v.reloadPage(),n.innerHTML="",g(n),G(n)},j=document.querySelector("#netcoreApp");N(j);
